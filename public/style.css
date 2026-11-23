@@ -11,6 +11,7 @@ html{scroll-behavior:smooth}
 body{background:var(--ink);color:var(--text);font-family:var(--sans);line-height:1.6;font-size:17px}
 a{color:var(--cyan);text-decoration:none}
 a:hover{text-decoration:underline}
+a[href^="tel:"]{white-space:nowrap}
 .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
 .skip{position:absolute;left:-9999px}
 .skip:focus{left:12px;top:12px;background:var(--gold);color:#000;padding:6px 12px;z-index:5}
