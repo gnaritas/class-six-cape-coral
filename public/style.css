@@ -1,0 +1,148 @@
+/* Class Six — Cape Coral FL · coin-op neon identity (hand-rolled, no frameworks) · BUILT-2026-11-23 */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0a0a13; --panel:#13131f; --panel2:#1a1a2b; --line:#2c2c44;
+  --pink:#ff2f87; --cyan:#3be3f2; --gold:#ffd23f;
+  --text:#eceaf6; --dim:#a9a5c2;
+  --mono:ui-monospace,"Courier New",Consolas,monospace;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--text);font-family:var(--sans);line-height:1.6;font-size:17px}
+a{color:var(--cyan);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:12px;top:12px;background:var(--gold);color:#000;padding:6px 12px;z-index:5}
+
+/* header */
+header.top{border-bottom:1px solid var(--line);background:var(--ink)}
+.nav{display:flex;flex-wrap:wrap;align-items:center;gap:16px 26px;padding:16px 22px;max-width:1080px;margin:0 auto}
+.mark{font-family:var(--mono);font-weight:700;font-size:22px;letter-spacing:.14em;color:var(--text);text-transform:uppercase}
+.mark b{color:var(--pink);text-shadow:0 0 14px rgba(255,47,135,.65)}
+.mark i{font-style:normal;color:var(--cyan);text-shadow:0 0 14px rgba(59,227,242,.55)}
+.nav nav{display:flex;flex-wrap:wrap;gap:8px 20px;margin-left:auto;align-items:center}
+.nav nav a{color:var(--dim);font-family:var(--mono);font-size:13.5px;letter-spacing:.08em;text-transform:uppercase}
+.nav nav a:hover{color:var(--cyan);text-decoration:none}
+
+/* buttons */
+.btn{display:inline-block;font-family:var(--mono);font-size:14px;letter-spacing:.08em;text-transform:uppercase;padding:12px 22px;border-radius:999px;border:2px solid var(--pink);color:var(--text);background:var(--pink);box-shadow:0 0 18px rgba(255,47,135,.4)}
+.btn:hover{text-decoration:none;box-shadow:0 0 26px rgba(255,47,135,.65)}
+.btn.ghost{background:transparent;color:var(--cyan);border-color:var(--cyan);box-shadow:0 0 14px rgba(59,227,242,.25)}
+.btn.ghost:hover{box-shadow:0 0 22px rgba(59,227,242,.5)}
+
+/* eyebrow + headings */
+.eyebrow{font-family:var(--mono);font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+h1{font-size:clamp(34px,6vw,58px);line-height:1.08;letter-spacing:.01em;font-weight:800}
+h1 .neon{color:var(--pink);text-shadow:0 0 18px rgba(255,47,135,.6)}
+h1 .neon2{color:var(--cyan);text-shadow:0 0 18px rgba(59,227,242,.55)}
+h2{font-size:clamp(24px,3.4vw,34px);line-height:1.15;font-weight:800;margin-bottom:14px}
+h3{font-size:20px;font-weight:700;margin-bottom:8px}
+p{margin:0}
+main>section{padding:64px 0;border-bottom:1px solid var(--line)}
+main>section:last-of-type{border-bottom:none}
+main section p+p,main section .prose p+p{margin-top:16px}
+.lede{font-size:19.5px;color:var(--text);max-width:640px}
+.dim{color:var(--dim)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:92px 0 84px;border-bottom:1px solid var(--line);
+  background:
+    repeating-linear-gradient(0deg,rgba(255,255,255,.028) 0 1px,transparent 1px 4px),
+    radial-gradient(700px 320px at 85% 0%,rgba(59,227,242,.16),transparent 70%),
+    radial-gradient(800px 380px at 12% 100%,rgba(255,47,135,.18),transparent 70%),
+    var(--ink)}
+.hero .wrap{position:relative;z-index:2}
+.hero .lede{margin-top:20px}
+.badgerow{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.badge{font-family:var(--mono);font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:7px 14px;color:var(--dim);background:rgba(255,255,255,.03)}
+.badge.hot{border-color:var(--gold);color:var(--gold)}
+.ctarow{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:30px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:26px 24px}
+.card:hover{border-color:#3d3d5e}
+.card .tick{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.card p{color:var(--dim);font-size:15.5px}
+.card a.more{font-family:var(--mono);font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-top:14px;display:inline-block}
+
+/* two-panel split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
+.side{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:26px 24px;min-height:150px}
+.side .tick{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:8px}
+.side p{color:var(--dim)}
+
+/* quote band */
+blockquote{background:var(--panel2);border-left:4px solid var(--pink);border-radius:0 14px 14px 0;padding:22px 26px;margin-top:24px;font-size:19px}
+blockquote cite{display:block;margin-top:10px;font-family:var(--mono);font-size:13px;color:var(--dim);font-style:normal;letter-spacing:.06em}
+
+/* menu list */
+ul.mlist{margin-top:18px;list-style:none}
+ul.mlist li{padding:13px 0;border-bottom:1px dashed var(--line)}
+ul.mlist li:last-child{border-bottom:none}
+ul.mlist b{color:var(--text)}
+ul.mlist .note{color:var(--dim);font-size:15px;display:block}
+
+/* visit grid + map */
+.visitgrid{display:grid;grid-template-columns:1fr 1.35fr;gap:22px;margin-top:28px;align-items:stretch}
+.infocard{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px}
+.infocard h3{color:var(--cyan)}
+.infocard p,.infocard li{color:var(--dim);font-size:15.5px}
+.infocard ul{list-style:none}
+.infocard li{padding:4px 0}
+.mapcell{flex:0 0 58%;min-width:0;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:10px;display:flex}
+.mapcell iframe{width:100%;min-height:340px;height:100%;border:0;border-radius:10px;background:#101018}
+
+/* contact form */
+.cform{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+.cform label{font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);display:flex;flex-direction:column;gap:8px}
+.cform .full{grid-column:1/-1}
+.cform input,.cform textarea{font-family:var(--sans);font-size:16px;color:var(--text);background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px;letter-spacing:normal;text-transform:none}
+.cform textarea{min-height:130px;resize:vertical}
+.cform input:focus,.cform textarea:focus{outline:2px solid var(--cyan);border-color:transparent}
+.cnote{grid-column:1/-1;color:var(--dim);font-size:14.5px}
+.contactgrid{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;margin-top:8px}
+
+/* breadcrumb + links row */
+.crumb{font-family:var(--mono);font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+.crumb a{color:var(--dim)}
+.crumb a:hover{color:var(--cyan)}
+.backlinks{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+
+/* footer */
+footer.site{border-top:1px solid var(--line);background:#07070f;margin-top:70px}
+.fgrid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:24px;padding:44px 0 30px}
+footer.site h4{font-family:var(--mono);font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+footer.site p,footer.site a{color:var(--dim);font-size:15px}
+footer.site a:hover{color:var(--cyan)}
+.footline{display:flex;flex-wrap:wrap;gap:8px 20px;border-top:1px solid var(--line);padding:16px 22px 26px;max-width:1080px;margin:0 auto}
+.footline span{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#6f6b8a}
+
+/* privacy prose */
+.prose h3{margin-top:30px}
+.prose ul{margin-top:12px;padding-left:22px;color:var(--dim)}
+.prose li{padding:3px 0}
+
+/* utility pages */
+.util{padding:110px 0 130px;text-align:center}
+.util .big{font-size:clamp(42px,8vw,72px);font-family:var(--mono);letter-spacing:.06em}
+.util p{margin:14px auto 0;max-width:520px;color:var(--dim)}
+
+/* tiers */
+@media (max-width:900px){
+  .visitgrid,.contactgrid{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr 1fr}
+  .split{grid-template-columns:1fr}
+  .mapcell iframe{min-height:300px}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  main>section{padding:48px 0}
+  .hero{padding:64px 0 60px}
+  .nav{padding:14px 18px}
+  .nav nav{margin-left:0}
+  .cform{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr}
+  .card{padding:22px 20px}
+}

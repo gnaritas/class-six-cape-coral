@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /thanks
+Disallow: /404
+
+Sitemap: https://class-six-cape-coral-demo.up.railway.app/sitemap.xml

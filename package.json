@@ -1,0 +1,8 @@
+{
+  "name": "class-six-cape-coral",
+  "version": "2.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
